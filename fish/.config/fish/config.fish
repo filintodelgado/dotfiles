@@ -3,6 +3,8 @@ set -g fish_greeting
 if status is-interactive
     starship init fish | source
     fzf --fish | source
+
+    set -x MANPAGER 'lvim +Man!'
 end
 
 # List Directory
