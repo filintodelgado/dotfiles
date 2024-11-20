@@ -1,0 +1,10 @@
+[user]
+	email = filintodelgado@gmail.com
+	name = Filinto Delgado
+
+[core]
+	pager = lvim -R -
+
+[color]
+	# lvim doesn't parse ansi codes and applies its own syntax highlight
+	diff = false
