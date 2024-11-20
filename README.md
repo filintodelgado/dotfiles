@@ -2,6 +2,12 @@
 
 ## How to use
 
+Clone this repository in your home directory:
+
+```
+git clone https://github.com/filintodelgado/dotfiles
+```
+
 Install [GNU Stow](https://www.gnu.org/software/stow/) in your system:
 
 ```sh
@@ -23,6 +29,13 @@ Install the [Hyprland](/hyprland/) package for example:
 ```sh
 stow hyprland
 ```
+
+> If you choose to clone the repository outside of home directory you need to specify
+> the target has your home directory when running stow:
+> ```sh
+> stow -t ~ hyprland
+> ```
+> Otherwise the packages will be installed relative to the parent directory.
 
 Packages may include more than of configuration.
 Check the _#Configurations_ sections in the _README.md_ first.
