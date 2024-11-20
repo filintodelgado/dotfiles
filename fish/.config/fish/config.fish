@@ -5,6 +5,7 @@ if status is-interactive
     fzf --fish | source
     eval (ssh-agent -c > /dev/null)
 
+    set -x EDITOR   'lvim'
     set -x MANPAGER 'lvim +Man!'
 end
 
