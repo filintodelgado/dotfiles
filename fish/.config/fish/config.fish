@@ -3,6 +3,7 @@ set -g fish_greeting
 if status is-interactive
     starship init fish | source
     fzf --fish | source
+    eval (ssh-agent -c > /dev/null)
 
     set -x MANPAGER 'lvim +Man!'
 end
