@@ -71,7 +71,9 @@ once:
 #### Peripherals
 
 - **Mice**: Logitech MX Master 3s
-- **Keyboard**: Nuphy Air 96v2
+- **Keyboards**:
+  - Nuphy Air 96v2
+  - AJAZZ AK820 Max
 - **Monitor**: Samsung Essential LS24C330
 - **Headset**: EPOS H6Pro
 
