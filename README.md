@@ -1,44 +1,58 @@
 # dotfiles
 
-## How to use
+My collection of dotfiles (configuration files).
 
-Clone this repository in your home directory:
+Those are organized in packages for each specific program. Those packages can be user
+specific settings ([user/](/user/)) or system wide settings ([system/](/system/)).
 
-```
-git clone https://github.com/filintodelgado/dotfiles
-```
+## Install the packages
 
-Install [GNU Stow](https://www.gnu.org/software/stow/) in your system:
+### Individually
 
-```sh
-sudo pacman -Sy stow
-```
+#### User package
 
-Choose the packages you want to install (read the _README.md_ file first and check
-if make sure you have all the dependencies you need before hand) and run the `stow`
-command to install the packages:
+1. Go to the [user/](/user/) settings directory:
 
-> The packages are the subdirectories inside this repository.
+    ```sh
+    cd user
+    ```
 
-```sh
-stow <packages...>
-```
+2. Choose your package and install with stow (take for example [fish](/user/fish/)):
 
-Install the [Hyprland](/hyprland/) package for example:
+    ```sh
+    stow -t ~ fish
+    ```
 
-```sh
-stow hyprland
-```
+#### System package
 
-> If you choose to clone the repository outside of home directory you need to specify
-> the target has your home directory when running stow:
-> ```sh
-> stow -t ~ hyprland
-> ```
-> Otherwise the packages will be installed relative to the parent directory.
+1. Go to the [system/](/system/) settings directory:
 
-Packages may include more than of configuration.
-Check the _#Configurations_ sections in the _README.md_ first.
+    ```sh
+    cd system
+    ```
+
+2. Choose your package and install with stow (requires sudo privileges):
+
+    ```sh
+    stow -t / keyd
+    ```
+
+### All
+
+Use the [`./stow`](/stow) script to install all the user, system or all the settings at
+once:
+
+- ```sh
+  ./stow user
+  ```
+
+- ```sh
+  ./stow system
+  ```
+
+- ```sh
+  ./stow all
+  ```
 
 ## My Setup
 
