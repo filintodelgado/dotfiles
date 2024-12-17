@@ -1,0 +1,104 @@
+#!/bin/bash -e
+
+readonly packages_to_install="$1"
+
+STOW_CMD=stow
+
+function log() {
+    echo "[LOG] $@" >&2
+}
+
+function warning() {
+    echo "[WARNING] $@" >&2
+}
+
+function fatal() {
+    local exit_code="$1"
+    shift
+
+    echo "[FATAL] $@" >&2
+    exit "$exit_code"
+}
+
+function check_required_commands() {
+    readonly required_commands=( stow )
+
+    for command in ${required_commands[@]}; do
+        if !command -v $command &> /dev/null; then
+            fatal 1 "command $command not found, please install it before proceeding"
+        fi
+    done
+}
+
+function install_packages() {
+    local target="$1"
+    local dir="$2"
+
+    if ! [ -d "$target" ]; then
+        fatal 2 "target directory \"$target\" doesn't exist"
+    fi
+
+    if ! [ -d "$dir" ]; then
+        fatal 2 "package directory \"$dir\" doesn't exist"
+    fi
+
+    pushd "$dir" &> /dev/null
+    for package in $(ls .); do
+        if ! $STOW_CMD -t "$target" "$package"; then
+            warning "failed to install package \"$package\" manual action might be needed"
+        fi
+    done
+    popd &> /dev/null
+}
+
+function install_user_packages() {
+    install_packages ~ user
+}
+
+function install_system_packages() {
+    local STOW_CMD="sudo stow"
+    install_packages / system
+}
+
+function install_all_packages() {
+    install_user_packages
+    install_system_packages
+}
+
+function help() {
+    cat << EOF
+./stow [user | system | all | help]
+
+Install the configurations files user wide, system wide or both:
+    user - installs only the user settings, those are installed relative to user's home (\$HOME) directory
+    system - install only the system wide settings relative to the root (/) directory
+    all - installs both user and system wide settings
+    help - displays the help page and exits
+EOF
+}
+
+function unknown_package() {
+    local package_name="$1"
+
+    warning "package \"$package_name\" is not know"
+    help
+    exit 3
+}
+
+case $packages_to_install in
+user)
+    install_user_packages
+    ;;
+system)
+    install_system_packages
+    ;;
+all)
+    install_all_packages
+    ;;
+help | "")
+    help
+    ;;
+*)
+    unknown_package
+    ;;
+esac
