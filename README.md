@@ -34,7 +34,7 @@ specific settings ([user/](/user/)) or system wide settings ([system/](/system/)
 2. Choose your package and install with stow (requires sudo privileges):
 
     ```sh
-    stow -t / keyd
+    sudo stow -t / keyd
     ```
 
 ### All
