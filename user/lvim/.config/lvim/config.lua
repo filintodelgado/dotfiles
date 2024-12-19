@@ -5,6 +5,8 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 lvim.transparent_window = true
 
+vim.opt.cursorline = false
+
 -- remove the padding and other margins in man mode
 vim.api.nvim_create_augroup("ManModeSettings", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
@@ -17,3 +19,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.foldcolumn = "0"
   end,
 })
+
+lvim.plugins = {
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+}
