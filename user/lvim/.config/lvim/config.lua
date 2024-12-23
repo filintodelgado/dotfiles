@@ -6,6 +6,7 @@
 lvim.transparent_window = true
 
 vim.opt.cursorline = false
+vim.opt.mouse = ""
 
 -- remove the padding and other margins in man mode
 vim.api.nvim_create_augroup("ManModeSettings", { clear = true })
@@ -23,3 +24,4 @@ vim.api.nvim_create_autocmd("FileType", {
 lvim.plugins = {
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
 }
+
