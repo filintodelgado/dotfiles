@@ -1,2 +1,5 @@
 # contains some sensitive information such as file paths
 **/fish_variables
+
+# cache should be create locally
+user/fcitx/.config/fcitx5/conf/cached_layouts
