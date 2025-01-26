@@ -13,3 +13,23 @@ abbr .5 'cd ../../../../..'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 abbr mkdir 'mkdir -p'
+
+# Always read the journal in reverse order and only read the current section
+abbr j 'journalctl -r -b'
+
+alias unitlog 'journalctl -rb -u'
+
+# Using 'exit' sometimes exits with a non-zero exit code
+alias bye 'exit 0'
+
+function bats -d="See the help page of a command with bat"
+    $argv --help | less -l help
+end
+
+# Displays the image in the 'kitty' terminal
+alias show 'kitty +kitten icat'
+
+# Open VM
+alias vm 'VBoxSDL --fullscreen --startvm'
+alias playground 'vm Playground'
+alias hackthebox 'vm "Hack The Box"'
