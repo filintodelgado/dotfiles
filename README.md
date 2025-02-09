@@ -2,6 +2,8 @@
 
 My collection of dotfiles (configuration files).
 
+![Screenshot of the Hyprland environment with Firefox on the left side and VSCode on the right](/assets/screenshot.png)
+
 Those are organized in packages for each specific program. Those packages can be user
 specific settings ([user/](/user/)) or system wide settings ([system/](/system/)).
 
