@@ -9,3 +9,4 @@ function add_new_line_after_command --on-event fish_postexec
         echo
     end
 end
+
