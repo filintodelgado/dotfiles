@@ -1,7 +1,6 @@
 set -x BROWSER  'firefox'
 
-set -x EDITOR   'lvim'
-alias vim 'lvim'
+alias vim 'nvim'
 
 set -x PAGER    'bat -p'
 set -x MANPAGER "sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -l man --paging=always'"
