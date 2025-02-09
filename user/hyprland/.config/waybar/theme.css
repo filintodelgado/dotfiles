@@ -1,10 +1,10 @@
-@define-color bar-bg rgba(0, 0, 0, 0);
+@import "mocha.css";
 
-@define-color main-bg #24283b;
-@define-color main-fg #7aa2f7;
+@define-color bar-bg @transparent;
+@define-color main-bg @base;
+@define-color main-fg @text;
+@define-color wb-act-bg @blue;
+@define-color wb-act-fg @text;
+@define-color wb-hvr-bg @red;
+@define-color wb-hvr-fg @text;
 
-@define-color wb-act-bg #bb9af7;
-@define-color wb-act-fg #b4f9f8;
-
-@define-color wb-hvr-bg #7aa2f7;
-@define-color wb-hvr-fg #cfc9c2;
