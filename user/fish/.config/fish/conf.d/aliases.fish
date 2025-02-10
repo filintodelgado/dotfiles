@@ -22,14 +22,12 @@ alias unitlog 'journalctl -rb -u'
 # Using 'exit' sometimes exits with a non-zero exit code
 alias bye 'exit 0'
 
-function bats -d="See the help page of a command with bat"
+function bats -d "See the help page of a command with bat"
     $argv --help | less -l help
 end
 
 # Displays the image in the 'kitty' terminal
 alias show 'kitty +kitten icat'
 
-# Open VM
-alias vm 'VBoxSDL --fullscreen --startvm'
-alias playground 'vm Playground'
-alias hackthebox 'vm "Hack The Box"'
+alias vtop 'vtop --theme certs --no-mouse'
+
