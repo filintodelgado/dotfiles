@@ -11,9 +11,6 @@ abbr .3 'cd ../../..'
 abbr .4 'cd ../../../..'
 abbr .5 'cd ../../../../..'
 
-# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
-abbr mkdir 'mkdir -p'
-
 # Always read the journal in reverse order and only read the current section
 abbr j 'journalctl -r -b'
 
