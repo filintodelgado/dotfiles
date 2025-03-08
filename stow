@@ -1,8 +1,9 @@
 #!/bin/bash -e
 
-readonly packages_to_install="$1"
+readonly option="$1"
 
-STOW_CMD=stow
+readonly STOW_CMD=stow
+readonly required_commands=( stow )
 
 function log() {
     echo "[LOG] $@" >&2
@@ -21,8 +22,6 @@ function fatal() {
 }
 
 function check_required_commands() {
-    readonly required_commands=( stow )
-
     for command in ${required_commands[@]}; do
         if !command -v $command &> /dev/null; then
             fatal 1 "command $command not found, please install it before proceeding"
@@ -85,20 +84,10 @@ function unknown_package() {
     exit 3
 }
 
-case $packages_to_install in
-user)
-    install_user_packages
-    ;;
-system)
-    install_system_packages
-    ;;
-all)
-    install_all_packages
-    ;;
-help | "")
-    help
-    ;;
-*)
-    unknown_package
-    ;;
+case $option in
+user)      install_user_packages ;;
+system)    install_system_packages ;;
+all)       install_all_packages ;;
+help | "") help ;;
+*)         unknown_package ;;
 esac
