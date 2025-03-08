@@ -1,0 +1,7 @@
+:root, * {
+    --browser-border-radius: 15px;
+    --url-bar-border-radius: 10px;
+
+    --min-window-width: 10px;
+    --min-window-height: 10px;
+}

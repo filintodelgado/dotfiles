@@ -56,6 +56,11 @@ once:
   ./stow all
   ```
 
+## Other packages
+
+Package not managed by stow can be found in [`others/`](/others/) and need to be installed
+manually.
+
 ## My Setup
 
 ### Hardware

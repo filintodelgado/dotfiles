@@ -1,0 +1,5 @@
+/* configures the minimum size for the window */
+:root:not([chromehidden~="toolbar"]){
+    min-width: var(--min-window-width) !important;
+    min-height: var(--min-window-height) !important;
+}

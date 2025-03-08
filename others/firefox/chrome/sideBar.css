@@ -1,0 +1,6 @@
+/* clean mode */
+:root[titlepreface*="᠎"] #sidebar-main,
+/* hide side bar */
+:root[titlepreface*="‌"] #sidebar-main {
+  display: none;
+}

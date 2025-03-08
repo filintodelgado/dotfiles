@@ -1,0 +1,35 @@
+#urlbar-background,
+#urlbar,
+#identity-box {
+    border-radius: var(--url-bar-border-radius) !important;
+}
+
+#identity-box {
+    clip-path: inset(0% 0% 0% 0% round var(--url-bar-border-radius));
+}
+
+#urlbar {
+    transition: transform 0.1s ease-out !important;
+}
+
+#urlbar[breakout-extend] {
+    z-index: 9999 !important;
+    transform: translateY(20vh);
+}
+
+/* hides the search engines in the url bar */
+.search-one-offs {
+    display: none !important;
+}
+
+/* hides the window buttons */
+.titlebar-buttonbox, .titlebar-spacer[type="post-tabs"] {
+    display: none !important;
+}
+
+/* clean mode */
+:root[titlepreface*="᠎"] #navigator-toolbox,
+/* hide nav bar */
+:root[titlepreface*="​"] #navigator-toolbox {
+  display: none;
+}

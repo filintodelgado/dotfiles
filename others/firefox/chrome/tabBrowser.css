@@ -1,0 +1,12 @@
+#tabbrowser-tabbox {
+  clip-path: inset(0% 0% 0% 0% round var(--browser-border-radius) 0 0 0);
+}
+
+/* clean mode */
+:root[titlepreface*="᠎"] #tabbrowser-tabbox,
+/* hide nav bar */
+:root[titlepreface*="​"] #tabbrowser-tabbox,
+/* hide side bar */
+:root[titlepreface*="‌"] #tabbrowser-tabbox {
+  clip-path: inset(0% 0% 0% 0% round 0 0 0 0);
+}
