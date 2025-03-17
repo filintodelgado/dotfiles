@@ -9,13 +9,20 @@
 }
 
 #urlbar {
-    transition: transform 0.1s ease-out !important;
+    margin: 0px !important;
+    transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
 }
 
 /* floating search bar */
 #urlbar[breakout-extend] {
     z-index: 9999 !important;
+    left: 10% !important;
+    width: calc(100vw - 20%) !important;
     transform: translateY(20vh);
+}
+
+#vertical-spacer {
+    display: none;
 }
 
 /* hides the search engines in the url bar */
