@@ -86,8 +86,19 @@ manually.
 
 ## Software
 
-- **Distro**: Arch Linux
+### Desktop
+
+- **Distro**: [Arch Linux](https://archlinux.org/)
   > I would recommend using the same distro as I am, but theoretically everything
   > should work regardless of your own setup.
-- **Login Manager**: SDDM
-- **Tilling Manager**: Hyprland
+- **Login Manager**: [SDDM](https://github.com/sddm/sddm)
+- **Tilling Manager**: [Hyprland](https://hyprland.org/)
+
+### Apps
+
+- **Browser**: [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+- **Mail**: [Thunderbird](https://www.thunderbird.net/en-US/thunderbird/all/)
+- **Code Editor**: [Visual Studio Code](https://code.visualstudio.com/)
+- **Tasks**: [Planify](https://useplanify.com/)
+- **Notes**: [Obsidian](https://obsidian.md/)
+- **Music**: [Spotify](https://www.spotify.com) with [Spicetify](https://spicetify.app/)
