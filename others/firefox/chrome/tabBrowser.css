@@ -1,4 +1,5 @@
-#tabbrowser-tabbox {
+#tabbrowser-tabbox,
+#tabbrowser-tabpanels {
   clip-path: inset(0% 0% 0% 0% round var(--browser-border-radius) 0 0 0);
 }
 
