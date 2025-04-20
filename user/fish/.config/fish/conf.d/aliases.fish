@@ -11,11 +11,6 @@ abbr .3 'cd ../../..'
 abbr .4 'cd ../../../..'
 abbr .5 'cd ../../../../..'
 
-# Always read the journal in reverse order and only read the current section
-abbr j 'journalctl -r -b'
-
-alias unitlog 'journalctl -rb -u'
-
 # Using 'exit' sometimes exits with a non-zero exit code
 alias bye 'exit 0'
 
@@ -27,4 +22,3 @@ end
 alias show 'kitty +kitten icat'
 
 alias vtop 'vtop --theme certs --no-mouse'
-
