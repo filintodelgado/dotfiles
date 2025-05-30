@@ -5,9 +5,12 @@
 
 /* clean mode */
 :root[titlepreface*="᠎"] #tabbrowser-tabbox,
+:root[titlepreface*="᠎"] #tabbrowser-tabpanels,
 /* hide nav bar */
 :root[titlepreface*="​"] #tabbrowser-tabbox,
+:root[titlepreface*="​"] #tabbrowser-tabpanels,
 /* hide side bar */
-:root[titlepreface*="‌"] #tabbrowser-tabbox {
+:root[titlepreface*="‌"] #tabbrowser-tabbox,
+:root[titlepreface*="‌"] #tabbrowser-tabpanels {
   clip-path: inset(0% 0% 0% 0% round 0 0 0 0);
 }
