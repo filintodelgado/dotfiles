@@ -1,6 +1,7 @@
 /* Catppuccin Mocha Palette */
 
 :root {
+  /* Pallet */
   --vimium-rosewater: #f5e0dc;
   --vimium-peach: #fab387;
   --vimium-green: #a6e3a1;
@@ -12,7 +13,12 @@
   --vimium-base: #1e1e2e;
   --vimium-mantle: #181825;
   --vimium-crust: #11111b;
+
+  /* Font */
+  --vimium-font-size: 17px;
+  --vimium-url-font-size: 14px;
 }
+
 #vimiumHintMarkerContainer div.internalVimiumHintMarker, #vimiumHintMarkerContainer div.vimiumHintMarker {
   padding: 3px 4px;
   background: var(--vimium-crust);
@@ -40,7 +46,8 @@
   animation: show 200ms cubic-bezier(0, 0, 0.2, 1) forwards;
   max-height: calc(100vh - 70px);
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 10px;
+  font-size: var(--vimium-font-size);
 }
 
 @keyframes show {
@@ -60,7 +67,8 @@
   background: var(--vimium-base);
   border: none;
   height: unset;
-  padding: 16px 30px;
+  padding: 10px 25px;
+  font-size: var(--vimium-font-size);
 }
 
 #vomnibar .vomnibarSearchArea {
@@ -99,6 +107,7 @@
 
 #vomnibar li .vomnibarUrl {
   color: var(--vimium-rosewater);
+  font-size: var(--vimium-url-font-size);
 }
 
 #vomnibar li .vomnibarMatch {
@@ -108,10 +117,12 @@
 
 #vomnibar li .vomnibarTitle .vomnibarMatch {
   color: var(--vimium-blue);
+  font-size: var(--vimium-font-size);
 }
 
 #vomnibar li.vomnibarSelected {
   background-color: var(--vimium-surface0);
+  font-size: var(--vimium-font-size);
 }
 
 div.vimiumHUD {
