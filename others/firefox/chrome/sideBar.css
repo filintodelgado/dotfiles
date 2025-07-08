@@ -4,3 +4,8 @@
 :root[titlepreface*="‌"] #sidebar-main {
   display: none;
 }
+
+/* adjust the padding when sidebar is hidden */
+:root[titlepreface*="​"] #sidebar-main {
+  padding: 5px 0px;
+}
