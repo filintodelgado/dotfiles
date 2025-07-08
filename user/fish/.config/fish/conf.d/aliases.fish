@@ -14,10 +14,6 @@ abbr .5 'cd ../../../../..'
 # Using 'exit' sometimes exits with a non-zero exit code
 alias bye 'exit 0'
 
-function bats -d "See the help page of a command with bat"
-    $argv --help | less -l help
-end
-
 # Displays the image in the 'kitty' terminal
 alias show 'kitty +kitten icat'
 
