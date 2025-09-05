@@ -14,8 +14,3 @@
 :root[titlepreface*="‌"] #tabbrowser-tabpanels {
   clip-path: inset(0% 0% 0% 0% round 0 0 0 0);
 }
-
-:root[inFullscreen] #tabbrowser-tabbox,
-:root[inFullscreen] #tabbrowser-tabpanels{
-  clip-path: inset(0% 0% 0% 0% round 0 0 0 0);
-}
