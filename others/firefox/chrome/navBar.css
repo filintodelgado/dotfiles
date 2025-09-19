@@ -1,5 +1,7 @@
 #urlbar-background,
 #urlbar,
+.urlbar-container,
+.urlbar-background,
 #identity-box {
     border-radius: var(--url-bar-border-radius) !important;
 }
