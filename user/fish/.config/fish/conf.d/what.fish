@@ -1,6 +1,11 @@
 function what -d "Displays the help page of a command with a pager and syntax highlight"
-    if test (count $argv) -eq 0 -o "$argv[1]" = help -o "$argv[1]" = --help
-        echo "Usage: what <command> [args...]"
+    if test (count $argv) -eq 0
+        less -l help
+        return
+    end
+
+    if test "$argv[1]" = help -o "$argv[1]" = --help
+        echo "Usage: what <command> [args...]" | less -l help
         return 0
     end
 
