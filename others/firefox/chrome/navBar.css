@@ -1,4 +1,3 @@
-#urlbar-background,
 #urlbar,
 .urlbar-container,
 .urlbar-background,
@@ -36,9 +35,6 @@
     display: none !important;
 }
 
-/* clean mode */
-:root[titlepreface*="᠎"] #navigator-toolbox,
-/* hide nav bar */
-:root[titlepreface*="​"] #navigator-toolbox {
+:root[titlepreface*="᠎"] #navigator-toolbox {
   display: none;
 }
