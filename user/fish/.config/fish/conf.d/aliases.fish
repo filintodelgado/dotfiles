@@ -18,3 +18,5 @@ alias bye 'exit 0'
 alias show 'kitty +kitten icat'
 
 alias vtop 'vtop --theme certs --no-mouse'
+
+alias grep 'rg'
