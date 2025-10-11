@@ -1,11 +1,9 @@
-#tabbrowser-tabbox,
-#tabbrowser-tabpanels {
-  clip-path: inset(0% 0% 0% 0% round var(--browser-border-radius) 0 0 0);
+#tabbrowser-tabbox {
+  border-radius: var(--browser-border-radius) 0px 0px 0px;
+  overflow: hidden;
 }
 
 :root[titlepreface*="᠎"] #tabbrowser-tabbox,
-:root[titlepreface*="᠎"] #tabbrowser-tabpanels,
-#main-window[inDOMFullscreen="true"] #tabbrowser-tabbox,
-#main-window[inDOMFullscreen="true"] #tabbrowser-tabpanels {
-  clip-path: inset(0% 0% 0% 0% round 0 0 0 0);
+#main-window[inDOMFullscreen="true"] #tabbrowser-tabbox {
+  border-radius: 0px;
 }

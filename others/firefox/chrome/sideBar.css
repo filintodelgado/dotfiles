@@ -1,3 +1,4 @@
-:root[titlepreface*="᠎"] #sidebar-main {
+:root[titlepreface*="᠎"] #sidebar-main,
+:root[titlepreface*="᠎"] #sidebar-launcher-splitter {
   display: none;
 }
