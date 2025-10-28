@@ -1,0 +1,101 @@
+@import url("./mocha.css");
+
+* {
+    border: none;
+    font-size: 12px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    color: @text;
+}
+
+window#waybar {
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid @blue;
+    background-color: @crust;
+}
+
+#custom-logo {
+    padding-left: 5px;
+    padding-right: 7px;
+    font-size: 15px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 7px 15px;
+}
+
+#tray > widget > image {
+    margin: 0 4px;
+}
+
+#network {
+    color: @blue;
+}
+
+.warning {
+    color: @yellow;
+}
+
+.critical {
+    color: @red;
+}
+
+#bluetooth,
+#pulseaudio,
+#network,
+#disk,
+#memory,
+#backlight,
+#cpu,
+#temperature,
+#custom-weather,
+#idle_inhibitor,
+#custom-updates {
+    padding: 0 5px;
+}
+
+.modules-center {
+    padding: 0px 5px;
+}
+
+#workspaces {
+    padding: 1px 5px;
+}
+
+#workspaces button {
+    padding: 1px 6px;
+    border-radius: 10px;
+}
+
+#clock {
+    padding: 0 7px;
+}
+
+#mpris {
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+#mpris.playing {
+    color: @yellow;
+}
+
+/* #mpris.playing {
+    animation: colorTranslate 5s infinite;
+    animation-timing-function: steps(14);
+}
+
+@keyframes colorTranslate {
+  0%   { color: @mauve; }
+  33%  { color: @peach; }
+  66%  { color: @red; }
+  100% { color: @mauve; }
+} */
+
+#pulseaudio.muted {
+    color: @red;
+    padding-top: 0;
+}
