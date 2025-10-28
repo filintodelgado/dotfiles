@@ -16,7 +16,3 @@ alias bye 'exit 0'
 
 # Displays the image in the 'kitty' terminal
 alias show 'kitty +kitten icat'
-
-alias vtop 'vtop --theme certs --no-mouse'
-
-alias grep 'rg'
