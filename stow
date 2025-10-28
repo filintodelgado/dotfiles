@@ -2,7 +2,7 @@
 
 readonly option="$1"
 
-readonly STOW_CMD=stow
+STOW_CMD=stow
 readonly required_commands=( stow )
 
 function log() {
