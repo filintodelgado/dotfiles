@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+readonly WALLPAPER_DIRECTORY="$HOME/Pictures/Wallpaper/Desktop/Static"
+
+readonly current_wallpaper="$(swww query | awk -F'image: ' '{ print $2 }')"
+
+readonly new_wallpaper="$(find -L "$WALLPAPER_DIRECTORY" \
+    -type f \
+    ! -path "$current_wallpaper" \
+    \( -name "*.jpg" -or -name "*.png" -or -name "*.gif" \) \
+    | shuf -n 1)"
+
+swww img "$new_wallpaper" -t center --transition-duration 1
