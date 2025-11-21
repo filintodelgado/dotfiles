@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Wrapper to clean up Dunst actions for Wofi
+
+# Dunst provides the lines in the following format:
+# "#<action description> (<summary>) [<id>:<action>]"
+
+# Read all input lines
+choices=$(cat)
+
+action_description=$(echo "$choices" | sed -E 's/^#([^ ]+).*/\1/')
+
+summary="$(echo "$choices" | sed -nE 's/^#.*\(([^)]*)\).*/\1/p' | head -n 1)"
+
+selection=$(echo "$action_description" | wofi --dmenu --prompt "$summary")
+
+# Find original line that matches the cleaned selection
+original=$(echo "$choices" | grep -F "$selection")
+
+# Return the original line (with the # prefix) so Dunst knows which action it was
+echo "$original"
