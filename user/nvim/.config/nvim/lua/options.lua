@@ -30,3 +30,5 @@ vim.opt.listchars = "tab:→ ,space:·,trail:·,nbsp:·,extends:>,precedes:<,eol
 -- spellchecking
 vim.opt.spell = true
 
+-- leader definitions
+vim.g.mapleader = " "
