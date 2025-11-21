@@ -6,11 +6,13 @@
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
     color: @text;
+    margin: 0px;
 }
 
 window#waybar {
-    border-radius: 10px;
     background: transparent;
+    margin: 0px;
+    border-radius: 10px;
     border: 2px solid @blue;
     background-color: @crust;
 }
@@ -24,7 +26,7 @@ window#waybar {
 .modules-left,
 .modules-center,
 .modules-right {
-    padding: 7px 15px;
+    padding: 5px 15px;
 }
 
 #tray > widget > image {
@@ -53,7 +55,8 @@ window#waybar {
 #temperature,
 #custom-weather,
 #idle_inhibitor,
-#custom-updates {
+#custom-updates,
+#custom-pomodoro {
     padding: 0 5px;
 }
 
@@ -62,11 +65,11 @@ window#waybar {
 }
 
 #workspaces {
-    padding: 1px 5px;
+    padding: 0px 5px;
 }
 
 #workspaces button {
-    padding: 1px 6px;
+    padding: 0px 6px;
     border-radius: 10px;
 }
 
@@ -79,23 +82,23 @@ window#waybar {
     border-radius: 10px;
 }
 
-#mpris.playing {
+#mpris.playing,
+#custom-pomodoro.running {
+    color: @green;
+}
+
+#mpris.paused,
+#custom-pomodoro.paused {
     color: @yellow;
 }
 
-/* #mpris.playing {
-    animation: colorTranslate 5s infinite;
-    animation-timing-function: steps(14);
+#mpris.stopped,
+#custom-pomodoro.stopped,
+#pulseaudio.muted {
+    color: @red
 }
 
-@keyframes colorTranslate {
-  0%   { color: @mauve; }
-  33%  { color: @peach; }
-  66%  { color: @red; }
-  100% { color: @mauve; }
-} */
-
-#pulseaudio.muted {
-    color: @red;
-    padding-top: 0;
+#custom-pomodoro.short-break,
+#custom-pomodoro.long-break {
+    font-style: italic;
 }

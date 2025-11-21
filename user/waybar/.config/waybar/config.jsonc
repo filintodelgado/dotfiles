@@ -15,7 +15,8 @@
         "memory",
         "temperature",
         "custom/gpu-temp",
-        "custom/updates"
+        "custom/updates",
+        "custom/pomodoro"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -32,12 +33,6 @@
         "format-icons": {
             "active": "",
             "default": ""
-        },
-        "persistent-workspaces": {
-            "*": [
-                1,
-                2
-            ]
         }
     },
     "memory": {
@@ -46,6 +41,7 @@
     "temperature": {
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}°C",
+        "tooltip-format": "CPU Temperature: {temperatureC}°C",
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "format-icons": [
             "",
@@ -81,13 +77,17 @@
         "format": "󰮯 {}",
         "tooltip-format": "Outdate packages",
         "on-click": "pamac-manager",
-        "interval": 60
+        "interval": 200
     },
     "mpris": {
-        "format": "{status_icon} {dynamic}",
+        "format": "{status_icon} {dynamic} {player_icon}",
         "dynamic-order": ["title", "artist"],
         "title-len": 30,
         "artist-len": 25,
+        "player-icons": {
+            "spotify": "",
+            "firefox": ""
+        },
         "status-icons": {
             "playing": "",
             "paused": "",
@@ -108,12 +108,23 @@
     "custom/logo": {
         "format": "󰸳",
         "tooltip": false,
-        "on-click": "/home/human/.local/share/bin/logoutlaunch.sh"
+        "on-click": "~/.local/share/bin/logoutlaunch.sh"
     },
     "pulseaudio": {
         "format": " {volume}%",
         "format-muted": " {volume}%",
         "on-click": "pavucontrol",
         "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "custom/pomodoro": {
+        "exec": "~/.config/waybar/scripts/pomodoro",
+        "return-type": "json",
+        "format": "{icon} {text}",
+        "format-alt": "{icon} {alt}",
+        "on-click-right": "gnome-pomodoro --pause-resume",
+        "on-click-middle": "gnome-pomodoro --start-stop",
+        "on-scroll-up": "gnome-pomodoro --extend",
+        "on-scroll-down": "gnome-pomodoro --skip",
+        "format-icons": ["󱑊", "󱐿", "󱑀", "󱑁", "󱑂", "󱑃", "󱑄", "󱑅", "󱑆", "󱑇", "󱑈"]
     }
 }
