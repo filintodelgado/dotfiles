@@ -1,0 +1,5 @@
+[mgr]
+show_symlink=true
+wrap="no"
+tab_size=4
+cursor_blink=true
