@@ -11,3 +11,4 @@ gtk_dark=true
 location=bottom
 line_warp=word
 parse_action=true
+term=kitty
