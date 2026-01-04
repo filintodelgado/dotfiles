@@ -20,4 +20,8 @@ vim.keymap.set('n', '<C-f>', live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<A-o>', builtin.buffers, { desc = 'Telescope buffers' })
 
 -- Neogit
-vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<cr>', { desc = 'Show Neogit UI'})
+vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<cr>', { desc = 'Show Neogit UI' })
+
+-- LSP
+vim.keymap.set('n', '<A-enter>', vim.diagnostic.open_float, { desc = 'Show diagnostic' })
+vim.keymap.set('n', '<S-CR>', vim.lsp.buf.type_definition, { desc = 'Goto type definition' })
