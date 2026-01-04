@@ -36,7 +36,8 @@
         }
     },
     "memory": {
-        "format": "  {used}G"
+        "format": "  {used}G",
+        "format-alt": "  {used}/{total}G"
     },
     "temperature": {
         "critical-threshold": 80,
@@ -72,10 +73,9 @@
         "critical-threshold": 80,
     },
     "custom/updates": {
-        "exec-if": "checkupdates | grep -q .",
-        "exec": "checkupdates | wc -l",
+        "exec": "~/.config/waybar/scripts/updates",
+        "return-type": "json",
         "format": "󰮯 {}",
-        "tooltip-format": "Outdate packages",
         "on-click": "pamac-manager",
         "interval": 200
     },

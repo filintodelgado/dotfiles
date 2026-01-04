@@ -101,4 +101,14 @@ window#waybar {
 #custom-pomodoro.short-break,
 #custom-pomodoro.long-break {
     font-style: italic;
+    color: @blue;
+}
+
+#custom-updates.updated {
+    font-style: italic;
+    color: @blue;
+}
+
+#custom-updates.failed {
+    color: @red;
 }
