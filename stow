@@ -55,7 +55,7 @@ function install_user_packages() {
 }
 
 function install_system_packages() {
-    local STOW_CMD="sudo stow"
+    local STOW_CMD="sudo $STOW_CMD"
     install_packages / system
 }
 
