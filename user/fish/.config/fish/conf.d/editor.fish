@@ -31,3 +31,4 @@ function edit --description "Edit a file or on the current directory with the de
 end
 
 bind -M insert ctrl-e edit
+bind -M insert ctrl-f "fg &> /dev/null"
