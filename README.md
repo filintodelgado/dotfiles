@@ -79,7 +79,8 @@ manually.
 
 - **CPU**: AMD Ryzen 5 5600X "Zen 3"
 - **GPU**: NVIDIA GeForce RTX 3060 "Ampere" Ventus
-  > I some configurations I do some extra steps because of Nvidia proprietary
+  > I some configurations I do some extra steps because of Nvidia proprietary drivers.
+  >
   > You won't need them if you don't have a Nvidia card as well.
 - **RAM**: G.SKILL Ripjaws V 32GB (2x16GB) DDR4-3200MHz
 - **Motherboard**:  Micro-ATX Asus Prime B550M-A WiFi II 
