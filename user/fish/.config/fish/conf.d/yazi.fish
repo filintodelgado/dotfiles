@@ -6,3 +6,5 @@ function y
     end
     rm -f -- "$tmp"
 end
+
+bind -M insert ctrl-y 'y; echo; fish_prompt'
