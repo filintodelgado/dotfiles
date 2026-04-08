@@ -7,6 +7,16 @@ My collection of dotfiles (configuration files).
 Those are organized in packages for each specific program. Those packages can be user
 specific settings ([user/](/user/)) or system wide settings ([system/](/system/)).
 
+## Clone the repository
+
+You could install the dotfiles anywhere, but the configurations expects the configuration to be
+installed in `~/.dotfiles/`:
+
+```sh
+git clone https://github.com/filintodelgado/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+```
+
 ## Install the packages
 
 ### Individually
