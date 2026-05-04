@@ -263,3 +263,4 @@ video/x-flic=mpv.desktop;
 video/mkv=mpv.desktop;
 video/vnd.avi=mpv.desktop;
 x-scheme-handler/mailto=org.mozilla.Thunderbird.desktop;
+application/pdf=org.gnome.Evince.desktop;
