@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pdftk "$@" cat output 'Merged.pdf'
+
