@@ -1,0 +1,3 @@
+#!/bin/bash
+
+convert_media mp4 "$@"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+wl-copy "$(pwd)/$1"
+
