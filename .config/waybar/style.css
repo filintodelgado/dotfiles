@@ -1,0 +1,114 @@
+@import url("./mocha.css");
+
+* {
+    border: none;
+    font-size: 12px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    color: @text;
+    margin: 0px;
+}
+
+window#waybar {
+    background: transparent;
+    margin: 0px;
+    border-radius: 10px;
+    border: 2px solid @blue;
+    background-color: @crust;
+}
+
+#custom-logo {
+    padding-left: 5px;
+    padding-right: 7px;
+    font-size: 15px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 5px 15px;
+}
+
+#tray > widget > image {
+    margin: 0 4px;
+}
+
+#network {
+    color: @blue;
+}
+
+.warning {
+    color: @yellow;
+}
+
+.critical {
+    color: @red;
+}
+
+#bluetooth,
+#pulseaudio,
+#network,
+#disk,
+#memory,
+#backlight,
+#cpu,
+#temperature,
+#custom-weather,
+#idle_inhibitor,
+#custom-updates,
+#custom-pomodoro {
+    padding: 0 5px;
+}
+
+.modules-center {
+    padding: 0px 5px;
+}
+
+#workspaces {
+    padding: 0px 5px;
+}
+
+#workspaces button {
+    padding: 0px 6px;
+    border-radius: 10px;
+}
+
+#clock {
+    padding: 0 7px;
+}
+
+#mpris {
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+#mpris.playing,
+#custom-pomodoro.running {
+    color: @green;
+}
+
+#mpris.paused,
+#custom-pomodoro.paused {
+    color: @yellow;
+}
+
+#mpris.stopped,
+#custom-pomodoro.stopped,
+#pulseaudio.muted {
+    color: @red
+}
+
+#custom-pomodoro.short-break,
+#custom-pomodoro.long-break {
+    font-style: italic;
+    color: @blue;
+}
+
+#custom-updates.updated {
+    font-style: italic;
+    color: @blue;
+}
+
+#custom-updates.failed {
+    color: @red;
+}

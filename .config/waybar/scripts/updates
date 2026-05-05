@@ -1,0 +1,33 @@
+#!/bin/bash -e
+
+exit_code=0
+
+function json_output() {
+    if checkupdate_output="$(checkupdates 2>&1)"; then
+        outdated_packages="$(wc -l <<< "$checkupdate_output")"
+        class="outdated"
+        text="$outdated_packages"
+        tooltip="Packages outdated: $outdated_packages"
+    elif [ -n "$checkupdate_output" ]; then
+        class="failed"
+        text="Failed"
+        tooltip="${checkupdate_output}"
+        exit_code=1
+    else
+        class="updated"
+        text="Updated"
+        tooltip="System is fully updated"
+    fi
+
+    cat << EOF | jq --compact-output --unbuffered
+{
+    "text": "$text",
+    "tooltip": "$tooltip",
+    "class": "$class"
+}
+EOF
+}
+
+json_output
+exit $exit_code
+

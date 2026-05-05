@@ -1,0 +1,131 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 5,
+    "spacing": 5,
+    "margin-top": 5,
+    "margin-left": 8,
+    "margin-right": 8,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "custom/logo",
+        "clock",
+        "cpu",
+        "custom/gpu-usage",
+        "memory",
+        "temperature",
+        "custom/gpu-temp",
+        "custom/updates",
+        "custom/pomodoro"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "privacy",
+        "mpris",
+        "tray",
+        "pulseaudio",
+        "network"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
+    },
+    "memory": {
+        "format": "  {used}G",
+        "format-alt": "  {used}/{total}G"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "tooltip-format": "CPU Temperature: {temperatureC}°C",
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "cpu": {
+        "format": " {usage}%"
+    },
+    "custom/gpu-temp": {
+        "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
+        "interval": 10,
+        "format": "{icon} {text}°C",
+        "tooltip-format": "GPU Temperature: {text}°C",
+        "critical-threshold": 80,
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "custom/gpu-usage": {
+        "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+        "interval": 10,
+        "format": "龍 {}%",
+        "tooltip-format": "GPU Usage: {text}%",
+        "critical-threshold": 80,
+    },
+    "custom/updates": {
+        "exec": "~/.config/waybar/scripts/updates",
+        "return-type": "json",
+        "format": "󰮯 {}",
+        "on-click": "pamac-manager",
+        "interval": 200
+    },
+    "mpris": {
+        "format": "{status_icon} {dynamic} {player_icon}",
+        "dynamic-order": ["title", "artist"],
+        "title-len": 30,
+        "artist-len": 25,
+        "player-icons": {
+            "spotify": "",
+            "firefox": "",
+            "deezer": "󰎆"
+        },
+        "status-icons": {
+            "playing": "",
+            "paused": "",
+            "stopped": ""
+        }
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a %d %b %H:%M}",
+        "interval": 60,
+        "tooltip-format": "Date and time"
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "  {essid}",
+        "on-click": "nm-connection-editor"
+    },
+    "custom/logo": {
+        "format": "󰸳",
+        "tooltip": false,
+        "on-click": "~/.local/share/bin/logoutlaunch.sh"
+    },
+    "pulseaudio": {
+        "format": " {volume}%",
+        "format-muted": " {volume}%",
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "custom/pomodoro": {
+        "exec": "~/.config/waybar/scripts/pomodoro",
+        "return-type": "json",
+        "format": "{icon} {text}",
+        "format-alt": "{icon} {alt}",
+        "on-click-right": "gnome-pomodoro --pause-resume",
+        "on-click-middle": "gnome-pomodoro --start-stop",
+        "on-scroll-up": "gnome-pomodoro --extend",
+        "on-scroll-down": "gnome-pomodoro --skip",
+        "format-icons": ["󱑊", "󱐿", "󱑀", "󱑁", "󱑂", "󱑃", "󱑄", "󱑅", "󱑆", "󱑇", "󱑈"]
+    }
+}

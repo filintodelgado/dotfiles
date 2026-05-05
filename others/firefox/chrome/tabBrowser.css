@@ -1,0 +1,9 @@
+#tabbrowser-tabbox {
+  border-radius: var(--browser-border-radius) 0px 0px 0px;
+  overflow: hidden;
+}
+
+:root[titlepreface*="᠎"] #tabbrowser-tabbox,
+#main-window[inDOMFullscreen="true"] #tabbrowser-tabbox {
+  border-radius: 0px;
+}
