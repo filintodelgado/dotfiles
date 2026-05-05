@@ -1,5 +1,0 @@
-#!/bin/bash
-
-readonly file="$1"
-
-awww img "$file" -t center --transition-duration 1
