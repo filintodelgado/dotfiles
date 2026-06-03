@@ -24,11 +24,13 @@ edit = [
 cursor_blink = true
 
 [[plugin.prepend_fetchers]]
-id = "git"
-url = "*"
-run = "git"
+id    = "git"
+url   = "*"
+run   = "git"
+group = "git"
 
 [[plugin.prepend_fetchers]]
-id = "git"
-url = "*/"
-run = "git"
+id    = "git"
+url   = "*/"
+run   = "git"
+group = "git"
