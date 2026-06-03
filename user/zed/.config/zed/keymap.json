@@ -1,0 +1,973 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-j": "vim::Down",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-j": ["vim::Literal", ["ctrl-j", "\n"]],
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-h": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-e": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "alt-l": "workspace::ActivateNextPane",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w w": "workspace::ActivateNextPane",
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-w": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false,
+          "ignore_brackets": false,
+        },
+      ],
+    },
+  },
+  {
+    "context": "Picker > Editor",
+    "unbind": {
+      "ctrl-w": "editor::DeleteToPreviousWordStart",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w d": "editor::GoToDefinitionSplit",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w g d": "editor::GoToDefinitionSplit",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w ]": "editor::GoToDefinitionSplit",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w ctrl-]": "editor::GoToDefinitionSplit",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w shift-d": "editor::GoToTypeDefinitionSplit",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w g shift-d": "editor::GoToTypeDefinitionSplit",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w space": "editor::OpenExcerptsSplit",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w g space": "editor::OpenExcerptsSplit",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w g t": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-g t": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w g shift-t": "pane::ActivatePreviousItem",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-g shift-t": "pane::ActivatePreviousItem",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-c": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w c": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-q": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w q": "pane::CloseActiveItem",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-up": "workspace::SwapPaneUp",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-right": "workspace::SwapPaneRight",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-left": "workspace::SwapPaneLeft",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-down": "workspace::SwapPaneDown",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-x": "workspace::SwapPaneAdjacent",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w x": "workspace::SwapPaneAdjacent",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w n": "workspace::NewFileSplitHorizontal",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-n": "workspace::NewFileSplitHorizontal",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-l": "workspace::MovePaneRight",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-k": "workspace::MovePaneUp",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-h": "workspace::MovePaneLeft",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-j": "workspace::MovePaneDown",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w o": "workspace::CloseInactiveTabsAndPanes",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-o": "workspace::CloseInactiveTabsAndPanes",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-shift-w": "workspace::ActivatePreviousPane",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-w": "workspace::ActivatePreviousPane",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-p": "workspace::ActivatePreviousPane",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w p": "workspace::ActivatePreviousPane",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w a": "pane::CloseAllItems",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-a": "pane::CloseAllItems",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-s": "pane::SplitHorizontal",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-s": "pane::SplitHorizontal",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w s": "pane::SplitHorizontal",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-v": "pane::SplitVertical",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w v": "pane::SplitVertical",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-w": ["vim::Literal", ["ctrl-w", "\u0017"]],
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w _": "vim::MaximizePane",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w =": "vim::ResetPaneSizes",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w -": "vim::ResizePaneDown",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w <": "vim::ResizePaneLeft",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w +": "vim::ResizePaneUp",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w >": "vim::ResizePaneRight",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-w": "workspace::ActivateNextPane",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w down": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w left": "workspace::ActivatePaneLeft",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-h": "workspace::ActivatePaneLeft",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w right": "workspace::ActivatePaneRight",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w l": "workspace::ActivatePaneRight",
+    },
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w up": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
+    "unbind": {
+      "tab": "editor::AcceptEditPrediction",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "menu": "editor::OpenContextMenu",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-s": ["vim::Literal", ["ctrl-s", "\u0013"]],
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-s": "editor::ShowSignatureHelp",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-k": ["vim::Literal", ["ctrl-k", "\u000b"]],
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-k": ["vim::PushDigraph", {}],
+    },
+  },
+  {
+    "context": "vim_mode == replace",
+    "unbind": {
+      "ctrl-k": ["vim::PushDigraph", {}],
+    },
+  },
+  {
+    "context": "vim_mode == waiting",
+    "unbind": {
+      "ctrl-k": ["vim::PushDigraph", {}],
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-x ctrl-o": "editor::ShowCompletions",
+    },
+  },
+  {
+    "context": "Picker > Editor",
+    "unbind": {
+      "tab": "picker::ConfirmCompletion",
+    },
+  },
+  {
+    "context": "Editor && showing_completions",
+    "unbind": {
+      "tab": "editor::ComposeCompletion",
+    },
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual || vim_mode == operator",
+    "bindings": {
+      "shift-k": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual || vim_mode == operator",
+    "unbind": {
+      "] b": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual || vim_mode == operator",
+    "bindings": {
+      "shift-j": "pane::ActivatePreviousItem",
+    },
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual || vim_mode == operator",
+    "unbind": {
+      "[ b": "pane::ActivatePreviousItem",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "g >": [
+        "editor::SelectNext",
+        {
+          "replace_newest": true,
+        },
+      ],
+    },
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+    },
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "unbind": {
+      "down": "editor::ContextMenuNext",
+    },
+  },
+  {
+    "context": "SettingsWindow > NavigationMenu",
+    "unbind": {
+      "shift-tab": "settings_editor::FocusPreviousNavEntry",
+    },
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "shift-tab": "editor::ContextMenuPrevious",
+    },
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "unbind": {
+      "up": "editor::ContextMenuPrevious",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-v": ["vim::Literal", ["ctrl-v", "\u0016"]],
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-v": ["vim::PushLiteral", {}],
+    },
+  },
+  {
+    "context": "vim_mode == replace",
+    "unbind": {
+      "ctrl-v": ["vim::PushLiteral", {}],
+    },
+  },
+  {
+    "context": "vim_mode == waiting",
+    "unbind": {
+      "ctrl-v": ["vim::PushLiteral", {}],
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-v": "vim::ToggleVisualBlock",
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-shift-v": "editor::Paste",
+    },
+  },
+  {
+    "context": "vim_mode == replace",
+    "unbind": {
+      "ctrl-shift-v": "editor::Paste",
+    },
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "unbind": {
+      "ctrl-c": "editor::ToggleComments",
+    },
+  },
+  {
+    "context": "GitCommit > Editor && VimControl && vim_mode == normal",
+    "unbind": {
+      "ctrl-c": "menu::Cancel",
+    },
+  },
+  {
+    "context": "vim_mode == waiting",
+    "unbind": {
+      "ctrl-c": "vim::ClearOperators",
+    },
+  },
+  {
+    "context": "vim_mode == operator",
+    "unbind": {
+      "ctrl-c": "vim::ClearOperators",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-c": ["vim::Literal", ["ctrl-c", "\u0003"]],
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-c": "vim::NormalBefore",
+    },
+  },
+  {
+    "context": "vim_mode == replace",
+    "unbind": {
+      "ctrl-c": "vim::NormalBefore",
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "unbind": {
+      "ctrl-c": "vim::SwitchToNormalMode",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-a": ["vim::Literal", ["ctrl-a", "\u0001"]],
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-f": ["vim::Literal", ["ctrl-f", "\u0006"]],
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "enter": "editor::GoToDefinition",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "f12": "editor::GoToDefinition",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "shift-enter": "editor::Rename",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "f2": "editor::Rename",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "ctrl-enter": "editor::Hover",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-k ctrl-i": "editor::Hover",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "new": "project_panel::NewFile",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "unbind": {
+      "d": "project_panel::NewDirectory",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "unbind": {
+      "x": "project_panel::RevealInFileManager",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "d": "project_panel::Delete",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "unbind": {
+      "shift-d": "project_panel::Delete",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "x": "project_panel::Cut",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "cut": "project_panel::Cut",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-b": ["vim::Literal", ["ctrl-b", "\u0002"]],
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-b": "vim::PageUp",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "p": "project_panel::Paste",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "paste": "project_panel::Paste",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "shift-enter": "project_panel::Rename",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "f2": "project_panel::Rename",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "shift-enter": "project_panel::Rename",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "enter": "project_panel::Rename",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-o": "pane::GoBack",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-o": ["vim::Literal", ["ctrl-o", "\u000f"]],
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-o": "vim::TemporaryNormal",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-f": "vim::PageDown",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-r": ["vim::Literal", ["ctrl-r", "\u0012"]],
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-r": "vim::PushRegister",
+    },
+  },
+  {
+    "context": "vim_mode == normal",
+    "unbind": {
+      "ctrl-r": "vim::Redo",
+    },
+  },
+  {
+    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+    "unbind": {
+      "ctrl-r": "vim::Redo",
+    },
+  },
+  {
+    "context": "vim_mode == normal",
+    "unbind": {
+      "ctrl-x": "vim::Decrement",
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "unbind": {
+      "ctrl-x": "vim::Decrement",
+    },
+  },
+  {
+    "context": "vim_mode == helix_select",
+    "unbind": {
+      "ctrl-x": "vim::Decrement",
+    },
+  },
+  {
+    "context": "(vim_mode == normal || vim_mode == helix_normal) && !menu",
+    "unbind": {
+      "ctrl-x": "vim::Decrement",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-x": ["vim::Literal", ["ctrl-x", "\u0018"]],
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-x ctrl-a": "assistant::InlineAssist",
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-x ctrl-z": "editor::Cancel",
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-x ctrl-c": "editor::ShowEditPrediction",
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-x ctrl-l": "editor::ToggleCodeActions",
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "unbind": {
+      "g ctrl-x": [
+        "vim::Decrement",
+        {
+          "step": true,
+        },
+      ],
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-x ctrl-e": "vim::LineDown",
+    },
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-x ctrl-y": "vim::LineUp",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-t": "pane::GoToOlderTag"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "unbind": {
+      "ctrl-t": "vim::Indent"
+    }
+  },
+  {
+    "context": "vim_mode == literal",
+    "unbind": {
+      "ctrl-t": [
+        "vim::Literal",
+        [
+          "ctrl-t",
+          "\u0014"
+        ]
+      ]
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "unbind": {
+      "z z": "project_panel::ScrollCursorCenter"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "z z": "project_panel::CollapseAllEntries"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "ctrl-left": "project_panel::CollapseAllEntries"
+    }
+  }
+]
